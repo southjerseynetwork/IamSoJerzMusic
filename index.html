@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>IamSoJerz — Official</title>
+<meta name="description" content="IamSoJerz — music, videos, merch, live dates and bookings.">
+<style>
+:root{--bg:#050505;--paper:#0d0d0d;--line:#242424;--text:#f4f1ea;--muted:#9a9a96;--acid:#d9ff2f;--max:1400px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.035;background-image:linear-gradient(#fff 1px,transparent 1px);background-size:100% 5px;z-index:20}
+a{color:inherit;text-decoration:none}.wrap{max-width:var(--max);margin:auto;padding:0 5vw}
+.nav{position:fixed;top:0;left:0;right:0;z-index:30;display:flex;justify-content:space-between;align-items:center;padding:18px 5vw;border-bottom:1px solid rgba(255,255,255,.1);background:rgba(5,5,5,.72);backdrop-filter:blur(16px)}
+.brand{font-size:21px;font-weight:950;letter-spacing:-1.5px}.brand i{font-style:normal;color:var(--acid)}.navlinks{display:flex;gap:26px;font-size:10px;letter-spacing:2px;text-transform:uppercase}.navlinks a:hover{color:var(--acid)}
+.hero{min-height:100vh;position:relative;display:flex;align-items:flex-end;overflow:hidden;background:radial-gradient(circle at 72% 35%,#3c431d 0,#141609 28%,#050505 67%)}
+.hero-photo{position:absolute;inset:0;background:linear-gradient(90deg,#050505 8%,rgba(5,5,5,.82) 43%,rgba(5,5,5,.15) 100%),linear-gradient(0deg,#050505 0,transparent 48%);display:flex;align-items:center;justify-content:flex-end;padding-right:7vw}
+.photo-placeholder{width:min(48vw,650px);height:78vh;border:1px dashed #555;background:linear-gradient(145deg,#171717,#090909);display:grid;place-items:center;text-align:center;color:#666;text-transform:uppercase;letter-spacing:3px;font-size:11px}
+.hero-content{position:relative;z-index:2;padding:0 0 9vh}.eyebrow{font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--acid);font-weight:800}.hero h1{font-size:clamp(75px,15vw,220px);line-height:.78;letter-spacing:-.09em;margin:18px 0 30px;font-weight:1000}.hero p{max-width:580px;color:#bdbdb8;line-height:1.6;font-size:15px}.btn{display:inline-block;margin:8px 8px 0 0;padding:14px 20px;border:1px solid #555;font-size:10px;font-weight:900;letter-spacing:2px;text-transform:uppercase}.btn.primary{background:var(--acid);color:#050505;border-color:var(--acid)}
+section{padding:110px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:25px;margin-bottom:35px}.section-head h2{font-size:clamp(48px,8vw,105px);line-height:.8;letter-spacing:-.08em;margin:8px 0 0}.section-head p{max-width:360px;color:var(--muted);font-size:13px;line-height:1.6}
+.music-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:30px}.art{min-height:500px;background:linear-gradient(135deg,#ddd9d0,#d6d2ca 35%,#8d897f);position:relative;overflow:hidden;color:#111;padding:35px;display:flex;align-items:flex-end}.art:before{content:"";position:absolute;width:65%;height:65%;right:-15%;top:-12%;border-radius:50%;background:#171717;opacity:.9}.art:after{content:"PERFECT TIMING";position:absolute;top:30px;left:35px;font-size:12px;letter-spacing:6px}.art-copy{position:relative;z-index:2}.art-copy strong{display:block;font-size:clamp(60px,8vw,120px);line-height:.75;letter-spacing:-.09em}.art-copy span{display:block;margin-top:22px;letter-spacing:4px;font-size:10px}
+.player{background:var(--paper);border:1px solid var(--line);padding:28px}.player-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}.player-top strong{font-size:14px}.track{display:grid;grid-template-columns:35px 1fr auto;gap:15px;align-items:center;padding:17px 0;border-top:1px solid var(--line)}.track:first-of-type{border-top:0}.num{color:#555;font-size:11px}.track-name{font-size:14px;font-weight:800}.feat{display:block;color:#777;font-size:11px;font-weight:400;margin-top:4px}.play{border:1px solid #444;background:transparent;color:#fff;padding:8px 12px;font-size:9px;letter-spacing:1px;text-transform:uppercase;cursor:pointer}.play:hover{background:var(--acid);color:#000;border-color:var(--acid)}
+.video-grid,.merch-grid,.date-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.video{aspect-ratio:16/10;background:#111;border:1px solid var(--line);display:flex;flex-direction:column;justify-content:flex-end;padding:20px;position:relative;overflow:hidden}.video .playbig{position:absolute;top:20px;right:20px;width:48px;height:48px;border:1px solid #777;border-radius:50%;display:grid;place-items:center}.video h3{font-size:25px;letter-spacing:-1px;margin:0 0 5px}.video p{color:#777;margin:0;font-size:11px}
+.merch{border:1px solid var(--line);background:linear-gradient(145deg,#151515,#090909);min-height:330px;padding:25px;display:flex;flex-direction:column;justify-content:space-between}.product-art{height:200px;display:grid;place-items:center;background:repeating-linear-gradient(45deg,#151515,#151515 8px,#181818 8px,#181818 16px);font-size:35px;font-weight:1000;letter-spacing:-3px}.merch h3{margin:15px 0 3px}.price{color:var(--acid);font-size:11px;letter-spacing:2px}
+.date{border-top:1px solid var(--line);padding:24px 0;display:grid;grid-template-columns:100px 1fr auto;gap:20px;align-items:center}.date .day{font-size:35px;font-weight:950}.date small{color:#777;letter-spacing:2px}.date h3{margin:0 0 5px;font-size:18px}.date p{margin:0;color:#777;font-size:11px}
+.booking{margin:30px 0 100px;padding:70px 6%;background:var(--acid);color:#050505}.booking h2{font-size:clamp(50px,9vw,120px);letter-spacing:-.08em;line-height:.8;margin:15px 0}.booking p{max-width:650px;line-height:1.6}.booking .btn{border-color:#050505;color:#050505}
+footer{border-top:1px solid var(--line);padding:40px 5vw;display:flex;justify-content:space-between;gap:20px;color:#666;font-size:10px;letter-spacing:1px}
+@media(max-width:850px){.navlinks{display:none}.hero{min-height:88vh}.photo-placeholder{width:65vw;height:62vh;opacity:.45}.music-layout,.video-grid,.merch-grid{grid-template-columns:1fr}.date{grid-template-columns:65px 1fr}.date .btn{display:none}.section-head{display:block}.section-head p{margin-top:20px}.art{min-height:420px}}
+</style>
+</head>
+<body>
+<nav class="nav">
+<a class="brand" href="#">Iam<span>So</span>Jerz</a>
+<div class="navlinks"><a href="#music">Music</a><a href="#visuals">Visuals</a><a href="#merch">Merch</a><a href="#live">Live</a><a href="#booking">Booking</a></div>
+</nav>
+
+<header class="hero">
+<div class="hero-photo"><div class="photo-placeholder">Drop artist hero photo here<br>assets/artist-hero.jpg</div></div>
+<div class="wrap hero-content">
+<div class="eyebrow">Official Artist Site · TeamLoyalty</div>
+<h1>IAMSO<br>JERZ</h1>
+<p>Independent artist. Rap. R&B energy. No shortcuts. The official home for music, visuals, merchandise, live dates and bookings.</p>
+<a class="btn primary" href="#music">Enter The Music</a><a class="btn" href="#booking">Book IamSoJerz</a>
+</div>
+</header>
+
+<main class="wrap">
+<section id="music">
+<div class="section-head"><div><div class="eyebrow">The Current Era</div><div class="section-head"><h2>PERFECT<br>TIMING.</h2></div></div><p>17 tracks. 41 minutes. Released October 31, 2025 through TeamLoyalty. The album includes C. Young, Rnb Dramel, Elrye, Mack Millitant, Nicole Bus and Fat Beezy.</p></div>
+<div class="music-layout">
+<div class="art"><div class="art-copy"><strong>PERFECT<br>TIMING</strong><span>IAMSOJERZ · TEAMLOYALTY · 2025</span></div></div>
+<div class="player">
+<div class="player-top"><strong>FEATURED PLAYER</strong><a class="btn primary" href="https://open.spotify.com/album/1Bs4DTnjKdqk6hKHDaVX9V" target="_blank">Open Spotify</a></div>
+<div id="tracks"></div>
+</div>
+</div>
+</section>
+
+<section id="visuals">
+<div class="section-head"><div><div class="eyebrow">Film / Video</div><h2>VISUALS.</h2></div><p>Music videos, performances and new visual content. Featured below: “All I Want” featuring Fat Beezy.</p></div>
+<div class="video-grid">
+<a class="video" href="https://vimeo.com/1128845457" target="_blank"><span class="playbig">▶</span><h3>All I Want</h3><p>IamSoJerz ft. Fat Beezy</p></a>
+<a class="video" href="https://www.youtube.com/@IamSoJerz" target="_blank"><span class="playbig">▶</span><h3>YouTube</h3><p>Official IamSoJerz channel</p></a>
+<div class="video"><div class="photo-placeholder" style="width:100%;height:100%;border:0;background:transparent">Add next music video<br>assets/video-02.jpg</div></div>
+</div>
+</section>
+
+<section id="merch">
+<div class="section-head"><div><div class="eyebrow">TeamLoyalty</div><h2>MERCH.</h2></div><p>Build this into the official TeamLoyalty store. Product cards are ready for your real inventory, prices and checkout links.</p></div>
+<div class="merch-grid">
+<div class="merch"><div class="product-art">TEAM<br>LOYALTY</div><div><h3>TeamLoyalty Tee</h3><div class="price">COMING SOON</div></div></div>
+<div class="merch"><div class="product-art">IAM<br>SOJERZ</div><div><h3>IamSoJerz Signature Tee</h3><div class="price">COMING SOON</div></div></div>
+<div class="merch"><div class="product-art">PT<br>2025</div><div><h3>Perfect Timing Collection</h3><div class="price">COMING SOON</div></div></div>
+</div>
+</section>
+
+<section id="live">
+<div class="section-head"><div><div class="eyebrow">On Stage</div><h2>LIVE.</h2></div><p>Confirmed dates can be added here as soon as you provide the tour schedule. No dates are being invented.</p></div>
+<div class="date-grid"><div class="date"><div class="day">—</div><div><small>TOUR</small><h3>Next show TBA</h3><p>Official date and venue coming soon.</p></div></div></div>
+</section>
+
+<div class="booking" id="booking">
+<div class="eyebrow">Bookings · Features · Interviews · Video</div>
+<h2>LET'S<br>WORK.</h2>
+<p>Open-verse features, beats with hook, interviews, video shoots and performance bookings.</p>
+<a class="btn" href="mailto:CreativeImagingllc@gmail.com?subject=IamSoJerz%20Booking%20Inquiry">Email Booking</a>
+<a class="btn" href="https://instagram.com/IamSoJerz" target="_blank">DM @IamSoJerz</a>
+</div>
+</main>
+
+<footer><span>© 2026 IAMSOJERZ / TEAMLOYALTY LLC</span><span>Official artist website</span></footer>
+
+<script>
+const tracks=[
+["01","Check Da Rhyme","feat. C. Young"],
+["02","Reciprocity","feat. Rnb Dramel"],
+["03","Da Vibe",""],
+["04","Neptunes Bop (Done with you)",""],
+["05","Cut A Rug!",""],
+["06","Exotic","feat. Elrye"],
+["07","Sasha Fierce",""],
+["08","DipSet","feat. Mack Millitant"],
+["09","PressyaLuck — interlude",""],
+["10","Hate, Pt. II","feat. Nicole Bus"],
+["11","Section 8","feat. Mack Millitant"],
+["12","All I Want","feat. Fat Beezy"],
+["13","Hate",""],
+["14","Rough Sex",""],
+["15","Yea Yeah",""],
+["16","Best Part of Waking Up!",""],
+["17","Perfect Timing (Outro)",""]
+];
+const box=document.getElementById("tracks");
+box.innerHTML=tracks.map((t,i)=>`<div class="track"><span class="num">${t[0]}</span><div class="track-name">${t[1]}<span class="feat">${t[2]}</span></div><button class="play" onclick="window.open('https://open.spotify.com/album/1Bs4DTnjKdqk6hKHDaVX9V','_blank')">Play</button></div>`).join("");
+</script>
+</body>
+</html>
